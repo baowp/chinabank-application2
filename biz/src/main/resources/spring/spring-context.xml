@@ -49,5 +49,5 @@
         <property name="basePackage" value="cn.com.chinabank.application2.persistence" />
     </bean>
     
-<!-- 	<import resource="spring-dubbo.xml"/> -->
+	<import resource="spring-dubbo.xml"/>
 </beans>

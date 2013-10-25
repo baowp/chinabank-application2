@@ -15,8 +15,7 @@
             
 	<bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping" />
 	<!-- 自动搜索@Controller标注的类 -->
-	<context:component-scan base-package="cn.com.chinabank.application2.controller" />
-	<context:component-scan base-package="cn.com.chinabank.shared.controller" />
+	<context:component-scan base-package="cn.com.chinabank.app2.controller" />
     
     <aop:aspectj-autoproxy proxy-target-class="true"/>
 	<!-- <context:annotation-config /> -->
