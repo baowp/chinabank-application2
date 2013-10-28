@@ -11,13 +11,14 @@ package cn.com.chinabank.app2.controller;
 
 import java.io.Serializable;
 
-import javax.annotation.Resource;
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import cn.com.chinabank.app2.utility.AppConstant;
 import cn.com.chinabank.shared.service.DubboSampleService;
+
+import com.alibaba.dubbo.config.annotation.Reference;
 
 /**
  * @author baowp
@@ -27,7 +28,7 @@ import cn.com.chinabank.shared.service.DubboSampleService;
 @RequestMapping("dubbo")
 public class DubboSampleController {
 
-	@Resource
+	@Reference(version = AppConstant.DUBBO_SAMPLE_SERVICE_VERSION)
 	private DubboSampleService dubboSampleService;
 
 	@ResponseBody
