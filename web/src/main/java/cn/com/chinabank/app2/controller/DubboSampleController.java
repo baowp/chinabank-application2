@@ -36,4 +36,5 @@ public class DubboSampleController {
 	public Serializable entry(String name) {
 		return dubboSampleService.execute(name);
 	}
+
 }

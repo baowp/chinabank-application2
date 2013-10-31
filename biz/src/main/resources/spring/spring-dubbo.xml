@@ -9,7 +9,7 @@
 
 	<!-- dubbo -->
 	<dubbo:application name="application2"/>
-	<dubbo:registry id="dubboRegistry" address="redis://localhost:6379"/>
+	<dubbo:registry id="dubboRegistry" address="${dubbo.registry.address}"/>
 	<dubbo:consumer check="false" />
 	
 	<dubbo:reference id="dubboService" interface="cn.com.chinabank.shared.service.DubboSampleService" version="1.0.0"/>
