@@ -11,6 +11,6 @@ import cn.com.chinabank.shared.launch.Main;
  */
 public class Launch {
     public static void main(String args[]) {
-        cn.com.chinabank.shared.launch.Main.main(new String[]{"spring","jetty"});
+        cn.com.chinabank.shared.launch.Main.main(args);
     }
 }
