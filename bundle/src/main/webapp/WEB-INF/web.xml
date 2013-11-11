@@ -30,5 +30,18 @@
 		<servlet-name>springmvc</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+
+    <servlet>
+        <servlet-name>hello</servlet-name>
+        <servlet-class>com.caucho.hessian.server.HessianServlet</servlet-class>
+        <init-param>
+            <param-name>service-class</param-name>
+            <param-value>cn.com.chinabank.app2.hessian.service.impl.BasicService</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>hello</servlet-name>
+        <url-pattern>/hessian/hello</url-pattern>
+    </servlet-mapping>
 	
 </web-app>
