@@ -45,6 +45,7 @@ public class HessianController {
         }
 
         List<Object> list=new ArrayList<Object>();
+        basic.setGreeting("Jim");
         list.add("Hello: " + basic.hello());
         logger.info("hessian.hello invoked");
         list.add("Hello: " + basic.getUser().getUserName());
