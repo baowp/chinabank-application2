@@ -16,4 +16,5 @@
 
 	<dubbo:reference id="dubboService" interface="cn.com.chinabank.shared.service.DubboSampleService" version="1.0.0"/>
 
+    <dubbo:reference id="callbackService" interface="cn.com.chinabank.shared.service.CallbackService" />
 </beans>
