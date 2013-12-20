@@ -12,7 +12,6 @@ package cn.com.chinabank.app2.controller;
 import cn.com.chinabank.shared.listener.CallbackListener;
 import cn.com.chinabank.shared.service.CallbackService;
 import cn.com.chinabank.shared.service.DubboSampleService;
-import org.apache.log4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
