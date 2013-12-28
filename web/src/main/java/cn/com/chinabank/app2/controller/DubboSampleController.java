@@ -9,6 +9,7 @@
  */
 package cn.com.chinabank.app2.controller;
 
+import cn.com.chinabank.shared.dto.BookDto;
 import cn.com.chinabank.shared.listener.CallbackListener;
 import cn.com.chinabank.shared.service.CallbackService;
 import cn.com.chinabank.shared.service.DubboSampleService;
@@ -42,9 +43,16 @@ public class DubboSampleController {
     }
 
     @ResponseBody
+    @RequestMapping(value = "/book")
+    public Object book(BookDto book) {
+        logger.info(book);
+        return dubboSampleService.execute(book);
+    }
+
+    @ResponseBody
     @RequestMapping(value = "/examine")
     public Object examine() {
-       Object obj= callbackService.addListener("foo.bar", new CallbackListener(){
+        Object obj = callbackService.addListener("foo.bar", new CallbackListener() {
             public void changed(String msg) {
                 System.out.println("callback1:" + msg);
             }
