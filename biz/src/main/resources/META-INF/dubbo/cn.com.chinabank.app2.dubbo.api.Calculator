@@ -1,0 +1,2 @@
+second=cn.com.chinabank.app2.dubbo.spi.SecondCalculator
+        cn.com.chinabank.app2.dubbo.spi.FirstCalculator
