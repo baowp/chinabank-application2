@@ -15,4 +15,6 @@ public interface BasicAPI {
     public String hello();
 
     public User getUser();
+
+    public boolean setUser(User user);
 }

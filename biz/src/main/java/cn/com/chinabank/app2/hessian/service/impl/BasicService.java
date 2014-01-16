@@ -17,6 +17,8 @@ public class BasicService implements BasicAPI {
             .getLogger(getClass());
     private String _greeting = "Hello, world";
 
+    private User user;
+
     public void setGreeting(String greeting) {
         _greeting = greeting;
         System.out.println("set greeting success:" + _greeting);
@@ -29,6 +31,14 @@ public class BasicService implements BasicAPI {
 
     public User getUser() {
         logger.info("baseServer.getUser()");
+        if (user != null)
+            return user;
         return new User("prance", "meshow");
+    }
+
+    public boolean setUser(User user) {
+        logger.info("basicService.setUser(user)");
+        this.user = user;
+        return true;
     }
 }

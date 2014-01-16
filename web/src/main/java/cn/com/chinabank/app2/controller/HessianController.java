@@ -1,5 +1,6 @@
 package cn.com.chinabank.app2.controller;
 
+import cn.com.chinabank.app2.hessian.entity.User;
 import cn.com.chinabank.app2.hessian.service.BasicAPI;
 import com.caucho.hessian.client.HessianProxyFactory;
 import org.springframework.stereotype.Controller;
@@ -48,6 +49,8 @@ public class HessianController {
         basic.setGreeting("Jim");
         list.add("Hello: " + basic.hello());
         logger.info("hessian.hello invoked");
+        list.add("Hello: " + basic.getUser().getUserName());
+        basic.setUser(new User("Jack","123"));
         list.add("Hello: " + basic.getUser().getUserName());
         logger.info("hessian.getUser invoked");
         list.add("Hello: " + basic.getUser().getPassword());
