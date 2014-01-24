@@ -23,6 +23,12 @@ public class CalculatorTest {
         extensions(extensionLoader);
 
         Calculator calculator;
+
+        calculator = extensionLoader.getExtension("second");
+        calculator.calculate("");
+        calculator = extensionLoader.getExtension("second2"); //the same instance with above
+        calculator.calculate("");
+
         /*calculator = extensionLoader.getDefaultExtension(); //find the extension by @SPI value
         calculator.calculate("");*/
 
