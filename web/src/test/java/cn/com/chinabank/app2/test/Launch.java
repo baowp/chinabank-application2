@@ -1,6 +1,7 @@
 package cn.com.chinabank.app2.test;
 
-import cn.com.chinabank.shared.launch.Main;
+
+import org.eclipse.jetty.diy.launch.Main;
 
 /**
  * Created with IntelliJ IDEA.
@@ -11,6 +12,6 @@ import cn.com.chinabank.shared.launch.Main;
  */
 public class Launch {
     public static void main(String args[]) {
-        cn.com.chinabank.shared.launch.Main.main(args);
+        Main.main(args);
     }
 }
