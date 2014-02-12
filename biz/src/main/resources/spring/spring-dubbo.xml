@@ -14,7 +14,9 @@
 
     <!--<dubbo:reference id="registryService" interface="com.alibaba.dubbo.registry.RegistryService" />-->
 
-	<dubbo:reference protocol="learn" id="dubboService" interface="cn.com.chinabank.shared.service.DubboSampleService" version="1.0.0" retries="0" timeout="3600000"/>
+	<dubbo:reference async="true" protocol="learn" id="dubboService" interface="cn.com.chinabank.shared.service.DubboSampleService" version="1.0.0" retries="0" timeout="3600000">
+        <dubbo:method name="execute" onreturn="basicService.setGreeting"/>
+    </dubbo:reference>
 
     <dubbo:reference id="callbackService" interface="cn.com.chinabank.shared.service.CallbackService" />
 </beans>
