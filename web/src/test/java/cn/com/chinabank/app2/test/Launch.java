@@ -2,6 +2,7 @@ package cn.com.chinabank.app2.test;
 
 
 import org.eclipse.jetty.diy.launch.Main;
+import org.eclipse.jetty.diy.utility.LaunchUtil;
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,6 +13,7 @@ import org.eclipse.jetty.diy.launch.Main;
  */
 public class Launch {
     public static void main(String args[]) {
+        LaunchUtil.LAUNCH_CLASS = Launch.class;
         Main.main(args);
     }
 }
