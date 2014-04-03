@@ -13,7 +13,6 @@ import org.eclipse.jetty.diy.utility.LaunchUtil;
  */
 public class Launch {
     public static void main(String args[]) {
-        LaunchUtil.LAUNCH_CLASS = Launch.class;
         Main.main(args);
     }
 }
