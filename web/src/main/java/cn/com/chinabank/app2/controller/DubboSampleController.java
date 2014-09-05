@@ -28,8 +28,7 @@ import java.io.Serializable;
 @RequestMapping("dubbo")
 public class DubboSampleController {
 
-    private final org.apache.log4j.Logger logger = org.apache.log4j.Logger
-            .getLogger(getClass());
+    private final org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(getClass());
 
     @Resource
     private DubboSampleService dubboSampleService;
@@ -45,7 +44,7 @@ public class DubboSampleController {
     @ResponseBody
     @RequestMapping(value = "/book")
     public Object book(BookDto book) {
-        logger.info(book);
+        logger.info(book.toString());
         return dubboSampleService.execute(book);
     }
 
@@ -57,7 +56,7 @@ public class DubboSampleController {
                 System.out.println("callback1:" + msg);
             }
         });
-        logger.info(obj);
+        logger.info(obj.toString());
         return obj;
     }
 
