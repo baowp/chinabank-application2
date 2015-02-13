@@ -2,7 +2,6 @@ package cn.com.chinabank.app2.test;
 
 
 import org.eclipse.jetty.diy.launch.Main;
-import org.eclipse.jetty.diy.utility.LaunchUtil;
 
 /**
  * Created with IntelliJ IDEA.

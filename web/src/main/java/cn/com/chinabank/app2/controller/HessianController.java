@@ -21,7 +21,7 @@ import java.util.List;
  * To change this template use File | Settings | File Templates.
  */
 @Controller
-@RequestMapping("hessian")
+@RequestMapping("hessianProxy")
 public class HessianController {
 
     private final org.apache.log4j.Logger logger = org.apache.log4j.Logger
@@ -29,8 +29,6 @@ public class HessianController {
 
     @Resource
     private HttpServletRequest request;
-    @Resource
-    private BasicAPI hessianService;
 
     @ResponseBody
     @RequestMapping(value = "/execute")
